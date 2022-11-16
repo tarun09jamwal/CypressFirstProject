@@ -1,0 +1,85 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-16T15:44:24.484Z",
+    "end": "2022-11-16T15:44:34.021Z",
+    "duration": 9537,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "27b5e415-88bf-465a-8f3e-d566e383ad2b",
+      "title": "",
+      "fullFile": "cypress/integration/TestCases/TC_02.spec.js",
+      "file": "cypress/integration/TestCases/TC_02.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Sauce-Demo test",
+          "fullTitle": "Sauce-Demo test",
+          "timedOut": null,
+          "duration": 6759,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.saucedemo.com');\nconst username = '//input[@name=\"user-name\"]';\nconst password = '//input[@name=\"password\"]';\nconst productAdd = '//button[@name=\"add-to-cart-sauce-labs-backpack\"]';\nconst productAdd2 = '//button[@name=\"add-to-cart-sauce-labs-bike-light\"]';\nconst productAdd3 = '//button[@name=\"add-to-cart-sauce-labs-bolt-t-shirt\"]';\nconst cart = '//a[@class=\"shopping_cart_link\"]';\ncy.xpath(username).type(\"standard_user\");\ncy.xpath(password).type(\"secret_sauce{enter}\");\ncy.get('.title').should('contain', 'Products');\ncy.xpath(productAdd).click();\ncy.xpath(productAdd2).click();\ncy.xpath(productAdd3).click();\ncy.xpath(cart).click();\ncy.get('#item_4_title_link > .inventory_item_name').should('contain', 'Sauce Labs Backpack');\ncy.get('#item_0_title_link > .inventory_item_name').should('contain', 'Sauce Labs Bike Light');\ncy.get('#item_1_title_link > .inventory_item_name').should('contain', 'Sauce Labs Bolt T-Shirt');\ncy.screenshot();",
+          "err": {},
+          "uuid": "173deb55-e751-4913-bcfb-90b287f8be9e",
+          "parentUUID": "27b5e415-88bf-465a-8f3e-d566e383ad2b",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "173deb55-e751-4913-bcfb-90b287f8be9e"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 6759,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportPageTitle": "My Test Suite",
+        "html": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

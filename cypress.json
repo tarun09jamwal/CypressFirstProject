@@ -1,0 +1,10 @@
+{
+    "chromeWebSecurity": false,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "reportPageTitle": "My Test Suite",
+        "html": true
+    },
+    "video": true
+}
